@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddModify.ModifyProductController">
+   <children>
+      <Label fx:id="ModProLabel" layoutX="47.0" layoutY="42.0" prefHeight="23.0" prefWidth="131.0" text="Modify Product">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="MinModProLabel" layoutX="196.0" layoutY="300.0" text="Min" />
+      <VBox fx:id="ModProLabelVBox" alignment="CENTER_LEFT" layoutX="32.0" layoutY="133.0" prefHeight="200.0" prefWidth="56.0" spacing="20.0">
+         <children>
+            <Label fx:id="IDModProLabel" text="ID" />
+            <Label fx:id="NameModProLabel" text="Name" />
+            <Label fx:id="InvModProLabel" text="Inv" />
+            <Label fx:id="PriceModProLabel" text="Price" />
+            <Label fx:id="MaxModProLabel" text="Max" />
+         </children>
+      </VBox>
+      <TextField fx:id="MinModProTB" layoutX="235.0" layoutY="295.0" onAction="#MinModProTB" prefHeight="27.0" prefWidth="96.0" />
+      <VBox fx:id="ModProTBVBox" layoutX="78.0" layoutY="143.0" prefHeight="200.0" prefWidth="92.0" spacing="10.0">
+         <children>
+            <TextField fx:id="IDModProTB" onAction="#IDModProTB" />
+            <TextField fx:id="NameModProTB" onAction="#NameModProTB" prefHeight="27.0" prefWidth="92.0" />
+            <TextField fx:id="InvModProTB" onAction="#InvModProTB" prefHeight="27.0" prefWidth="95.0" />
+            <TextField fx:id="PriceModProTB" onAction="#PriceModProTB" />
+            <TextField fx:id="MaxModProTB" onAction="#MaxModProTB" />
+         </children>
+      </VBox>
+      <TableView fx:id="ParInvTbl" layoutX="396.0" layoutY="68.0" prefHeight="205.0" prefWidth="365.0">
+        <columns>
+          <TableColumn fx:id="ModParID" prefWidth="53.8870849609375" text="Part ID" />
+          <TableColumn fx:id="ModParName" prefWidth="71.04034423828125" text="Part Name" />
+            <TableColumn fx:id="ModInvLvl" prefWidth="97.1612548828125" text="Inventory Level" />
+            <TableColumn fx:id="ModPrice" prefWidth="141.0" text="Price/ Cost per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="AssociatedParTbl" layoutX="392.0" layoutY="323.0" prefHeight="205.0" prefWidth="365.0">
+        <columns>
+          <TableColumn fx:id="AssociatedParID" prefWidth="58.685455322265625" text="Part ID" />
+          <TableColumn fx:id="AssociatedParName" prefWidth="72.30648803710938" text="Part Name" />
+            <TableColumn fx:id="AssociatedInvLvl" prefWidth="99.74188232421875" text="Inventory Level" />
+            <TableColumn fx:id="AssociatedParPrice" prefWidth="134.25811767578125" text="Price/ Cost per Unit" />
+        </columns>
+      </TableView>
+      <Button fx:id="AddProButton" layoutX="720.0" layoutY="282.0" mnemonicParsing="false" onAction="#AddPro" prefHeight="23.0" prefWidth="41.0" text="Add" />
+      <Button fx:id="RemoveParButton" layoutX="595.0" layoutY="533.0" mnemonicParsing="false" onAction="#RemoveAssociatedPart" text="Remove Associated Parts" />
+      <Button fx:id="SaveProButton" layoutX="594.0" layoutY="566.0" mnemonicParsing="false" onAction="#SavePro" prefHeight="27.0" prefWidth="58.0" text="Save" />
+      <Button fx:id="CancelProButton" layoutX="686.0" layoutY="566.0" mnemonicParsing="false" onAction="#CancelPro" prefHeight="27.0" prefWidth="67.0" text="Cancel" />
+      <TextField fx:id="SearchModProTB" layoutX="559.0" layoutY="27.0" />
+      <Button fx:id="ProGoButton" layoutX="728.0" layoutY="27.0" mnemonicParsing="false" onAction="#SearchPro" prefHeight="27.0" prefWidth="33.0" text="GO">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="AnchorPane" fx:id="MainPane" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddModify.MainController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="Main" layoutX="5.0" layoutY="14.0" prefHeight="421.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="InventoryLabel" layoutX="24.0" layoutY="32.0" text="Inventory Management System">
+               <font>
+                  <Font name="Avenir Book" size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="12.0" layoutY="67.0" prefHeight="300.0" prefWidth="381.0">
+               <children>
+                  <TextField fx:id="SearchParInv" layoutX="145.0" layoutY="23.0" onAction="#SearchParInv" />
+                  <Label fx:id="PartsLabel" layoutX="14.0" layoutY="25.0" text="Parts">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="183.0" layoutY="262.0" prefHeight="37.0" prefWidth="191.0" spacing="12.0">
+                     <children>
+                        <Button fx:id="AddParButton" mnemonicParsing="false" onAction="#AddPar" text="Add" />
+                        <Button fx:id="ModParButton" mnemonicParsing="false" onAction="#ModPar" text="Modify" />
+                        <Button fx:id="DeleteParButton" mnemonicParsing="false" onAction="#DeletePar" text="Delete" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="ParInvTbl" layoutY="55.0" prefHeight="200.0" prefWidth="365.0">
+                     <columns>
+                        <TableColumn fx:id="PartID" prefWidth="60.0" text="Parts ID" />
+                        <TableColumn fx:id="ParName" prefWidth="76.0" text="Part Name" />
+                        <TableColumn fx:id="PartInvLvl" prefWidth="98.0" text="Inventory Level" />
+                        <TableColumn fx:id="ParPrice" prefWidth="130.0" text="Price/ Cost per Unit" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="ParGoButton" layoutX="317.0" layoutY="23.0" mnemonicParsing="false" onAction="#SearchParInv" prefHeight="27.0" prefWidth="38.0" text="GO">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="396.0" layoutY="71.0" prefHeight="300.0" prefWidth="365.0">
+               <children>
+                  <Label fx:id="ProductLabel" layoutX="14.0" layoutY="23.0" text="Products">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="ProInvTbl" layoutY="51.0" prefHeight="200.0" prefWidth="365.0">
+                     <columns>
+                        <TableColumn fx:id="ProID" prefWidth="66.0" text="Product ID" />
+                        <TableColumn fx:id="ProName" prefWidth="88.0" text="Product Name" />
+                        <TableColumn fx:id="ProInvLvl" prefWidth="92.0" text="Inventory Level" />
+                        <TableColumn fx:id="ProPrice" prefWidth="118.0" text="Price /Cost per Unit" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="SearchProInv" layoutX="151.0" layoutY="21.0" onAction="#SearchProInv" />
+                  <HBox layoutX="183.0" layoutY="260.0" prefHeight="37.0" prefWidth="191.0" spacing="12.0">
+                     <children>
+                        <Button fx:id="AddProButton" mnemonicParsing="false" onAction="#AddPro" text="Add" />
+                        <Button fx:id="ModProButton" mnemonicParsing="false" onAction="#ModPro" text="Modify" />
+                        <Button fx:id="DeleteProButton" mnemonicParsing="false" onAction="#DeletePro" text="Delete" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="ProGoButton" layoutX="323.0" layoutY="21.0" mnemonicParsing="false" onAction="#SearchProInv" prefHeight="27.0" prefWidth="38.0" text="GO">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button fx:id="ExitInvButton" layoutX="734.0" layoutY="379.0" mnemonicParsing="false" onAction="#ExitInv" text="Exit" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>
